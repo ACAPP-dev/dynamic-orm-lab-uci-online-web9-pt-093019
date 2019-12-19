@@ -35,6 +35,6 @@ class InteractiveRecord
       #binding.pry
       values << self.send(col_name) unless send(col_name).nil?
     end
-    values.join(", ")
+    values.join("', '")
   end
 end
