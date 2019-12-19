@@ -26,6 +26,6 @@ class InteractiveRecord
     #binding.pry
     self.class.column_names.delete_if do |column_name|
       column_name == "id"
-    end
+    end.join(", ")
   end
 end
