@@ -31,7 +31,9 @@ class InteractiveRecord
   def values_for_insert
     binding.pry
     values = []
-
+    self.class.column_names.each do |col_name|
+      values << self.send(col_name) unless send(col_name) == nil
+    end
 
   end
 end
