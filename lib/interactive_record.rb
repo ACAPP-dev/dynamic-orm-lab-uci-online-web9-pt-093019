@@ -22,4 +22,8 @@ class InteractiveRecord
   def table_name_for_insert
     self.class.table_name
   end
+  def col_names_for_insert
+    binding.pry
+    self.class.column_names
+  end
 end
