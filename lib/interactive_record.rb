@@ -43,6 +43,6 @@ class InteractiveRecord
       VALUES(#{self.values_for_insert)})
     SQL
     DB[:conn].execute(sql)
-    @id = DB[:conn].execute("")
+    @id = DB[:conn].execute("LAST INSERT ROWID()")
   end
 end
