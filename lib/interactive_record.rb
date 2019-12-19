@@ -29,6 +29,6 @@ class InteractiveRecord
     end.join(", ")
   end
   def values_for_insert
-    
+    binding.pry
   end
 end
